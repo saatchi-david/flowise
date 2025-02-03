@@ -1,9 +1,8 @@
 import { omit } from 'lodash'
-import { ICommonObject, IDocument, INode, INodeData, INodeParams } from '../../../src/Interface'
-import { TextSplitter } from 'langchain/text_splitter'
+import { getCredentialData, getCredentialParam, handleEscapeCharacters } from '../../../src'
+import { ICommonObject, IDocument, INode, INodeData, INodeParams, INodeOutputsValue } from '../../../src/Interface'
 import { NotionAPILoader, NotionAPILoaderOptions } from '@langchain/community/document_loaders/web/notionapi'
-import { getCredentialData, getCredentialParam, handleEscapeCharacters } from '../../../src/utils'
-import { INodeOutputsValue } from '../../../src'
+import { TextSplitter } from 'langchain/text_splitter'
 
 class NotionDB_DocumentLoaders implements INode {
     label: string
